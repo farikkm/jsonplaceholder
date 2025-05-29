@@ -8,6 +8,18 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body._lock {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+}
+
 .posts {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -31,10 +43,37 @@ body {
   padding: 10px;
 }
 
+.form textarea{
+  padding: 10px;
+}
+
 button {
   padding: 10px;
 }
 
 #app {
   padding: 20px;
+}
+
+#update-modal {
+  position: fixed;
+  left: 0; top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+
+  background-color: #3333336a;
+}
+
+#update-modal > .form {
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+#update-modal > .form input {
+  width: 400px;
 }
