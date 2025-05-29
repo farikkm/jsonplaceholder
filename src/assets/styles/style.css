@@ -31,6 +31,10 @@ body {
   padding: 10px;
 }
 
+button {
+  padding: 10px;
+}
+
 #app {
   padding: 20px;
 }

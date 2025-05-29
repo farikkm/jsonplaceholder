@@ -1,5 +1,4 @@
 export async function httpRequest(url, method, headers, body) {
-  let loading = false;
   let error = "";
   let data = null;
 
@@ -16,8 +15,6 @@ export async function httpRequest(url, method, headers, body) {
   }
 
   try {
-    loading = true;    
-
     const response = await fetch(url, options);
 
     if (!response.ok) {
@@ -28,9 +25,7 @@ export async function httpRequest(url, method, headers, body) {
   } catch (err) {
     error = err.message;
     console.error("Request failed:", error);
-  } finally {
-    loading = false;
   }
 
-  return { data, error, loading }
+  return { data, error }
 }
